@@ -7,7 +7,7 @@ export default (data, format, replacer) => {
     case 'stylish':
       return stylish(data, replacer);
     case 'plain':
-       return plain(data);
+      return plain(data);
     // case 'json':
     //   return makeJson(data, null, replacer);
     default:
