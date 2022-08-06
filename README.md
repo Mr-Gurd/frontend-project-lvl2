@@ -12,6 +12,9 @@ Supporting: .json, .yml, .yaml.
 
 #### 1. Simple JSON file:
 https://asciinema.org/a/EKHJE091tN9WWScRcryTVJD0H
-
 #### 2. Simple YAML file:
 https://asciinema.org/a/RTWIWHBMhHL7NARJ78kbFWxTW
+#### 3. Nested YAML file:
+https://asciinema.org/a/513097
+#### 3. Plain output:
+https://asciinema.org/a/513101

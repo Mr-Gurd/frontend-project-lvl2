@@ -1,4 +1,4 @@
-// import lain from './plain.js';
+import plain from './plain.js';
 import stylish from './stylish.js';
 // import json from './json.js';
 
@@ -6,8 +6,8 @@ export default (data, format, replacer) => {
   switch (format) {
     case 'stylish':
       return stylish(data, replacer);
-    // case 'plain':
-    //   return makePlain(data);
+    case 'plain':
+       return plain(data);
     // case 'json':
     //   return makeJson(data, null, replacer);
     default:
