@@ -1,4 +1,4 @@
-name: tests-check
+name: eslint-check
 
 on: push
 jobs:
