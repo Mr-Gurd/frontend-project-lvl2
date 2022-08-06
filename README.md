@@ -6,7 +6,8 @@
 
 ## Description:
 ### gendiff
-compares two configuration files and shows a difference
+compares two configuration files and shows a difference.
+Supporting: .json, .yml, .yaml.
 
 
 #### 1. Simple JSON file:

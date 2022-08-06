@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import tree from './tree.js';
-import format from './format.js';
+import formatSelector from './formatters/formatSelector.js';
 import parser from './parsers.js';
 
 const getPath = (file) => path.resolve(process.cwd(), file);
@@ -14,11 +14,11 @@ const getFileContent = (file) => {
   return parser(content, extension);
 };
 
-const genDiff = (filepath1, filepath2) => {
+const genDiff = (filepath1, filepath2, format = 'stylish') => {
   const fileContent1 = getFileContent(filepath1);
   const fileContent2 = getFileContent(filepath2);
   const diffTree = tree(fileContent1, fileContent2);
-  return format(diffTree);
+  return formatSelector(diffTree, format);
 };
 
 export default genDiff;
