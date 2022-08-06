@@ -18,3 +18,5 @@ https://asciinema.org/a/RTWIWHBMhHL7NARJ78kbFWxTW
 https://asciinema.org/a/513097
 #### 3. Plain output:
 https://asciinema.org/a/513101
+#### 4. JSON output:
+https://asciinema.org/a/513108
