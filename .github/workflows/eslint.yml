@@ -1,4 +1,4 @@
-name: eslint-check
+name: test-check
 
 on: push
 jobs:
@@ -8,3 +8,11 @@ jobs:
       - uses: actions/checkout@v2
       - run: make install
       - run: make lint
+      - name: Hexlet project check
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{secrets.CODECLIMATE_SECRET}}
+        with:
+          coverageCommand: make test-coverage
+          debug: true
+          
