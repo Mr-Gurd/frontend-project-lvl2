@@ -9,4 +9,8 @@
 compares two configuration files and shows a difference
 
 
-#### 1. https://asciinema.org/a/EKHJE091tN9WWScRcryTVJD0H
+#### 1. Simple JSON file:
+https://asciinema.org/a/EKHJE091tN9WWScRcryTVJD0H
+
+#### 2. Simple YAML file:
+https://asciinema.org/a/RTWIWHBMhHL7NARJ78kbFWxTW
