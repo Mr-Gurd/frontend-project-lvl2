@@ -16,7 +16,7 @@ const format = (tree) => {
       case 'equal':
         return `${prefix[line.status]}${line.key}: ${line.value}`;
       case 'notEqual':
-        return `${prefix.onlySecond}${line.key}: ${line.value1}\n${prefix.onlyFirst}${line.key}: ${line.value2}`;
+        return `${prefix.onlyFirst}${line.key}: ${line.value1}\n${prefix.onlySecond}${line.key}: ${line.value2}`;
       default:
         return 'error';
     }
