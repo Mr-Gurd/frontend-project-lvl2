@@ -1,6 +1,6 @@
 import plain from './plain.js';
 import stylish from './stylish.js';
-// import json from './json.js';
+import json from './json.js';
 
 export default (data, format, replacer) => {
   switch (format) {
@@ -8,9 +8,9 @@ export default (data, format, replacer) => {
       return stylish(data, replacer);
     case 'plain':
       return plain(data);
-    // case 'json':
-    //   return makeJson(data, null, replacer);
+    case 'json':
+      return json(data, null, replacer);
     default:
-      throw new Error(`Invalid file format type: '.${format}'! Try supported file formats.`);
+      throw new Error(`Format: '.${format}' not supported!`);
   }
 };

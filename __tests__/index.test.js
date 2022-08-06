@@ -13,6 +13,7 @@ const readFile = (filename) => fs.readFileSync(getFixturePath(filename), 'utf8')
 
 const expectedFile1 = readFile('correct1.txt').slice(0, -1);
 const expectedPlain = readFile('correctPlain.txt').slice(0, -1);
+const expectedJson = readFile('correctJson.txt').slice(0, -1);
 const file1Json = `${process.cwd()}/__fixtures__/file1.json`;
 const file2Json = `${process.cwd()}/__fixtures__/file2.json`;
 const file1Yml = `${process.cwd()}/__fixtures__/file1.yaml`;
@@ -30,9 +31,14 @@ test('stylish yaml', () => {
   expect(result).toEqual(expectedFile1);
 });
 
-test('plain json', () => {
+test('plain format', () => {
   const result = gendiff(file1Json, file2Json, 'plain');
   expect(result).toEqual(expectedPlain);
+});
+
+test('json format', () => {
+  const result = gendiff(file1Json, file2Json, 'json');
+  expect(result).toEqual(expectedJson);
 });
 
 test('parsers wrong extension', () => {
